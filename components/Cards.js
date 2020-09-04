@@ -46,10 +46,10 @@ function cardMaker(object){
     imgDiv.classList = ('img-container')
 
     const img = document.createElement('img')
-    img.src = obj.authoPhoto
+    img.src = object.authorName
 
     const span = document.createElement('span')
-    span.classList = `By: ${authorName}`
+    span.textContent = ('hi')
 
     card.appendChild(headLine)
     headLine.appendChild(author)
@@ -61,8 +61,10 @@ function cardMaker(object){
         console.log(headLine)
     })
 
-    return card
+
+
+  return card
 }
     const newCard = document.querySelector('.cards-container')
-    const card = cardMaker()
+    const card = cardMaker('https://lambda-times-api.herokuapp.com/articles');
     newCard.appendChild(card)
